@@ -14,6 +14,8 @@ import { ItemsSwitch } from './components/ItemsSwitch/ItemsSwitch';
 import { ListItemsSwitch } from './components/ListItemsSwitch/ListItemsSwitch';
 import Card from './components/Card/Card';
 import { ListCard } from './components/ListCard/ListCard';
+import { Title } from './components/Card/components/Title/Title';
+import { Author } from './components/Card/components/Author/Author';
 
 
 function App(): JSX.Element {
@@ -53,7 +55,7 @@ function App(): JSX.Element {
       imageUri: "https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg",
       onImagePress: () => { },
       showActionIcon: true,
-      positionActionBar: "horizontal"
+      positionActionBar: "Horizontal"
     },
     {
       title: 'Dani Alves recorre al pare de Neymar per pagar la fiança i sortir en llibertat avui mateix',
@@ -62,7 +64,6 @@ function App(): JSX.Element {
       imageUri: "https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg",
       onImagePress: () => { },
       showActionIcon: false,
-      positionActionBar: "horizontal"
     },
     {
       title: 'Dani Alves recorre al pare de Neymar per pagar la fiança i sortir en llibertat avui mateix',
@@ -71,7 +72,6 @@ function App(): JSX.Element {
       imageUri: "https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg",
       onImagePress: () => { },
       showActionIcon: false,
-      positionActionBar: "horizontal"
     }
   ];
 
@@ -103,15 +103,48 @@ function App(): JSX.Element {
           />
           <ItemsSwitch isUnique toggleUniqueSwitch={handleSelectItem} />
           <Card
-            title={'Bayona i "Robot dreams", sense Oscar en una gala on triomfa "Oppenheimer": tots els premiats'}
-            author="Oriol Whel"
-            city="Washington"
             imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
             onImagePress={() => { }}
-            showActionIcon={true}
-            positionActionBar="horizontal"
-          />
-          <ListCard items={itemsCardList} />
+            imagePosition='top'
+          >
+            <Title title="Bayona y 'Robot Dreams', sin Oscar en una gala donde triunfa 'Oppenheimer': todos los premiados" />
+            <Author author="Oriol Whel" city="Washington" emojibarRigth />
+          </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='top'
+          >
+            <Title title="Bayona y 'Robot Dreams', sin Oscar en una gala donde triunfa 'Oppenheimer': todos los premiados" />
+            <Author author="Oriol Whel" city="Washington" />
+            <EmojiBar
+              clapsCountInitial={0}
+              smilesCountInitial={0}
+            />
+          </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='bottom'
+          >
+            <Title title="Bayona y 'Robot Dreams', sin Oscar en una gala donde triunfa 'Oppenheimer': todos los premiados" />
+          </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='left'
+          >
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left" />
+          </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='left'
+          >
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left"  author="" city="" />
+           
+          </Card>
+          <ListCard items={itemsCardList} direction="right" />
         </ScrollView>
       </SafeAreaView>
     </NativeBaseProvider>
@@ -119,3 +152,13 @@ function App(): JSX.Element {
 }
 
 export default App;
+
+/*  <Card
+            title={'Bayona i "Robot dreams", sense Oscar en una gala on triomfa "Oppenheimer": tots els premiats'}
+            author="Oriol Whel"
+            city="Washington"
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            showActionIcon={true}
+            positionActionBar="horizontal"
+          /> */

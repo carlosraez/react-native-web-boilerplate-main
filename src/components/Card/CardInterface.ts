@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
+
 export interface CardProps {
-    title: string;
-    author?: string;
+    children: ReactNode;
+    imagePosition: string;
     imageUri: string;
-    city?:string;
     onImagePress?: () => void;
     showActionIcon?: boolean; 
     positionActionBar: string;

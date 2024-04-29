@@ -14,6 +14,13 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  withEmojiVertical: {
+    backgroundColor: '#fff', 
+    marginBottom: 24,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
   imageList: {
     width: 164, 
     height: 125, 
@@ -28,6 +35,10 @@ export default StyleSheet.create({
   },
   textContainer: {
     flex: 1,
+  },
+  containerTextWithEmoji: {
+    flex: 1,
+    justifyContent: 'space-between'
   },
   authorContainer: {
     display: 'flex',

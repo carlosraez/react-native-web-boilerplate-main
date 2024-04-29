@@ -11,8 +11,11 @@ export const ListCard: React.FC<ListItemsProps> = ({
 
 
   return items.map((item, index) => {
+    const { title, imageUri, positionActionBar, showActionIcon} = item
+    
     return (
-      <Card title={item.title} imageUri={item.imageUri} positionActionBar={item.positionActionBar} isList showActionIcon={item.showActionIcon} />
+      <Card title={title} imageUri={imageUri} positionActionBar={positionActionBar} isList showActionIcon={showActionIcon} />
     );
   });
 };
+

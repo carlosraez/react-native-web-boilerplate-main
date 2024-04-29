@@ -7,25 +7,23 @@ import { CardProps } from './CardInterface';
 import { EmojiBar } from '../EmojiBar/EmojiBar';
 
 const Card: React.FC<CardProps> = ({
-  title,
-  author,
+  children,
+  imagePosition,
   imageUri,
   onImagePress,
   showActionIcon,
   positionActionBar,
-  city,
   isList
 }) => {
+  const styleImagePosition = imagePosition === 'left' ? styles.imageList : styles.image
 
   const getImage = () => (
     imageUri && (
       <TouchableOpacity onPress={onImagePress}>
-        <Image source={{ uri: imageUri }} style={isList ? styles.imageList : styles.image} />
+        <Image source={{ uri: imageUri }} style={styleImagePosition} />
       </TouchableOpacity>
     )
   );
-
-  console.log(isList);
 
 
   const getTitle = () => (
@@ -39,34 +37,68 @@ const Card: React.FC<CardProps> = ({
     </>
   );
 
-  const getAuthor = () => (
-    <View style={!isList && styles.authorContainer}>
-      {author && <Text style={styles.subtitle}>{author}</Text>}
-      {city && <Text style={styles.city}>{city}</Text>}
-      {positionActionBar === 'horizontal' && (
-        <View style={styles.horizontalBarContainerBar}>
-          {!isList && getEmojiBar()}
-        </View>
-      )}
-    </View>
-  );
+  const getEmojiHorizontal = () => {
+    return positionActionBar === 'horizontal' && (
+      <View style={styles.horizontalBarContainerBar}>
+        {!isList && getEmojiBar()}
+      </View>
+    )
+  }
+
+  const getAuthor = () => {
+    return !isList && (
+      <View style={styles.authorContainer}>
+        {author && <Text style={styles.subtitle}>{author}</Text>}
+        {city && <Text style={styles.city}>{city}</Text>}
+        {getEmojiHorizontal()}
+      </View>
+    );
+  }
 
   const getEmojiBar = () => {
     return showActionIcon && (
       <EmojiBar clapsCountInitial={0} smilesCountInitial={0} />
     );
-  };
+  }; 
+
+
+
+  const styleContainer =  imagePosition === 'left' ?  styles.cardList : styles.card 
+
+  const styleContainerText = isList && positionActionBar === 'Horizontal' ? styles.containerTextWithEmoji : styles.textContainer
 
   return (
-    <View style={isList ? styles.cardList : styles.card}>
-      {getImage()}
-      <View style={styles.textContainer}>
-        {getTitle()}
-        {getAuthor()}
-      </View>
-      {positionActionBar === 'Vertical' && getEmojiBar()}
+    <View style={styleContainer}>
+      {(imagePosition === 'top' || imagePosition === 'left') && getImage() }
+      {children}
+      {imagePosition === 'bottom' && getImage()}
     </View>
   );
 };
 
 export default Card;
+
+/*isList
+    ? (positionActionBar === 'Horizontal' ? styles.withEmojiVertical : styles.cardList)
+    : styles.card;*/
+
+//card
+//author
+//imagePosition top right left botton
+
+/*
+Card
+ {children}
+ imagen
+ bloque 
+ </Card>
+ <View style={styleContainer}>
+      {getImage()}
+      <View style={styleContainerText}>
+        {getTitle()}
+        {getAuthor()}
+      </View>
+      {positionActionBar === 'Vertical' && getEmojiBar()}
+    </View>
+ 
+ */
