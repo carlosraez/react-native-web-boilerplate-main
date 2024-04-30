@@ -6,6 +6,10 @@ export default StyleSheet.create({
         marginBottom: 16,
         flexDirection: 'row',
     },
+    authorContainerList: {
+        display: 'flex',
+        flexDirection: 'row',
+    },
     subtitle: {
         fontSize: 14,
         fontWeight: 'bold',

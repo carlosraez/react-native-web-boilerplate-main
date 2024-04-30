@@ -5,7 +5,7 @@ import {
   Platform
 } from 'react-native';
 import { MenuDropDown } from './components/MenuDropDown/MenuDropDown';
-import { NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider, View } from 'native-base';
 
 import { QuoteText } from './components/QuoteText/QuoteText';
 import { EmojiBar } from './components/EmojiBar/EmojiBar';
@@ -140,9 +140,10 @@ function App(): JSX.Element {
             imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
             onImagePress={() => { }}
             imagePosition='left'
+            bodyComponents={2}
           >
-            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left"  author="" city="" />
-           
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left"  />
+            <Author author="Oriol Whel" city="Washington" imagePosition="left" />
           </Card>
           <ListCard items={itemsCardList} direction="right" />
         </ScrollView>

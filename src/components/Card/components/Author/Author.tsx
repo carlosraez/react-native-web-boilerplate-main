@@ -6,7 +6,7 @@ import styles from './AuthorStyle'
 import { EmojiBar } from '../../../EmojiBar/EmojiBar';
 import { AuthorProps } from './AuthorInterface';
 
-export const Author: React.FC<AuthorProps> = ({ author, city, emojibarRigth }) => {
+export const Author: React.FC<AuthorProps> = ({ author, city, emojibarRigth, imagePosition }) => {
 
     const getEmojiHorizontal = () =>
     (
@@ -16,7 +16,7 @@ export const Author: React.FC<AuthorProps> = ({ author, city, emojibarRigth }) =
     )
 
 
-    return (<View style={styles.authorContainer}>
+    return (<View style={imagePosition === 'left' ? styles.authorContainerList : styles.authorContainer}>
         {author && <Text style={styles.subtitle}>{author}</Text>}
         {city && <Text style={styles.city}>{city}</Text>}
         {emojibarRigth && getEmojiHorizontal()}
