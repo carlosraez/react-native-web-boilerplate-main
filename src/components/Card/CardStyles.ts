@@ -1,5 +1,4 @@
-import { Flex } from 'native-base';
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   card: {

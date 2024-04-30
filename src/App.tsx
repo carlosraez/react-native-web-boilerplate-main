@@ -165,7 +165,6 @@ function App(): JSX.Element {
               smilesCountInitial={0}
             />
           </Card>
-          <ListCard items={itemsCardList} direction="right" />
         </ScrollView>
       </SafeAreaView>
     </NativeBaseProvider>
