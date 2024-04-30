@@ -116,6 +116,14 @@ function App(): JSX.Element {
             imagePosition='top'
           >
             <Title title="Bayona y 'Robot Dreams', sin Oscar en una gala donde triunfa 'Oppenheimer': todos los premiados" />
+            <Author author="Oriol Whel" />
+          </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='top'
+          >
+            <Title title="Bayona y 'Robot Dreams', sin Oscar en una gala donde triunfa 'Oppenheimer': todos los premiados" />
             <Author author="Oriol Whel" city="Washington" />
             <EmojiBar
               clapsCountInitial={0}
@@ -144,6 +152,18 @@ function App(): JSX.Element {
           >
             <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left"  />
             <Author author="Oriol Whel" city="Washington" imagePosition="left" />
+          </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='left'
+            bodyComponents={2}
+          >
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left"  />
+            <EmojiBar
+              clapsCountInitial={0}
+              smilesCountInitial={0}
+            />
           </Card>
           <ListCard items={itemsCardList} direction="right" />
         </ScrollView>

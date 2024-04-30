@@ -1,4 +1,3 @@
-// Card.tsx
 import React from 'react';
 import { View, Image, TouchableOpacity, } from 'react-native';
 
@@ -23,11 +22,10 @@ const Card: React.FC<CardProps> = ({
   );
 
   const styleContainer = imagePosition === 'left' ? (bodyComponents === 2 ? styles.bodyTwoComponents : styles.cardList) : styles.card
-  const bodyStyle = bodyComponents === 2 ? styles.bodyTwoComponents : null
-
+ 
   const getChildren = () => {
     if (bodyComponents === 2) {
-      return (<View style={styles.containerTextWithEmoji}>{children}</View>);
+      return (<View style={styles.containerSpaceBetween}>{children}</View>);
     }
 
     return children;

@@ -8,7 +8,7 @@ export default StyleSheet.create({
     marginBottom: 16, 
   },
   listTitle: {
-    fontSize: 16, 
+    fontSize: 14, 
     fontWeight: 'bold', 
   },
 })

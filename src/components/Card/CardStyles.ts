@@ -43,39 +43,9 @@ export default StyleSheet.create({
   textContainer: {
     flex: 1,
   },
-  containerTextWithEmoji: {
+  containerSpaceBetween: {
     flex: 1,
     justifyContent: 'space-between'
-  },
-  authorContainer: {
-    display: 'flex',
-    marginBottom: 16,
-    flexDirection: 'row',
-  },
-  title: {
-    fontSize: 18, 
-    fontWeight: 'bold', 
-    marginBottom: 8, 
-  },
-  listTitle: {
-    fontSize: 14, 
-    fontWeight: 'bold', 
-  },
-  subtitle: {
-    fontSize: 14, 
-    fontWeight: 'bold',
-  },
-  city: {
-    marginLeft: 4,
-    fontSize: 14, 
-    color: 'grey', 
-  },
-  horizontalBarContainerBar: {
-    marginLeft: 16,
-    marginTop: -5,
-  },
-  BarListContainer: {
-    justifyContent: 'space-between',
   },
 })
 
