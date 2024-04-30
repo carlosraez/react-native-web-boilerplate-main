@@ -1,4 +1,4 @@
 export interface TitleProps {
     title: string;
-    imagePosition?: string;
+    imagePositionLateral?: boolean;
 }

@@ -1,7 +1,7 @@
 export interface AuthorProps {
     author: string;
-    city: string;
+    city?: string;
     emojibarRigth?: boolean;
-    imagePosition:string;
+    imagePositionLateral?:boolean;
     
 }

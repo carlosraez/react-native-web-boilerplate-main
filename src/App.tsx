@@ -16,6 +16,7 @@ import Card from './components/Card/Card';
 import { ListCard } from './components/ListCard/ListCard';
 import { Title } from './components/Card/components/Title/Title';
 import { Author } from './components/Card/components/Author/Author';
+import { Theme } from './components/Card/components/Theme/Theme';
 
 
 function App(): JSX.Element {
@@ -142,7 +143,7 @@ function App(): JSX.Element {
             onImagePress={() => { }}
             imagePosition='left'
           >
-            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left" />
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral />
           </Card>
           <Card
             imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
@@ -150,8 +151,8 @@ function App(): JSX.Element {
             imagePosition='left'
             bodyComponents={2}
           >
-            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left"  />
-            <Author author="Oriol Whel" city="Washington" imagePosition="left" />
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral  />
+            <Author author="Oriol Whel" city="Washington" imagePositionLateral/>
           </Card>
           <Card
             imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
@@ -159,7 +160,7 @@ function App(): JSX.Element {
             imagePosition='left'
             bodyComponents={2}
           >
-            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left"  />
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral />
             <EmojiBar
               clapsCountInitial={0}
               smilesCountInitial={0}
@@ -170,8 +171,39 @@ function App(): JSX.Element {
             onImagePress={() => { }}
             imagePosition='right'
            >
-            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left" />
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral />
           </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='right'
+            bodyComponents={2}
+          >
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral  />
+            <EmojiBar
+              clapsCountInitial={0}
+              smilesCountInitial={0}
+            />
+          </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='right'
+            bodyComponents={2}
+          >
+            <Theme theme={'Eleccions Generals 2023'} />
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral  />
+            <Author author="Oriol Whel" city="Washington" imagePositionLateral />
+          </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='right'
+            bodyComponents={2}
+          >
+            <Theme theme={'Eleccions Generals 2023'} />
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral />
+          </Card>   
         </ScrollView>
       </SafeAreaView>
     </NativeBaseProvider>
@@ -179,13 +211,3 @@ function App(): JSX.Element {
 }
 
 export default App;
-
-/*  <Card
-            title={'Bayona i "Robot dreams", sense Oscar en una gala on triomfa "Oppenheimer": tots els premiats'}
-            author="Oriol Whel"
-            city="Washington"
-            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
-            onImagePress={() => { }}
-            showActionIcon={true}
-            positionActionBar="horizontal"
-          /> */
