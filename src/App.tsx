@@ -203,7 +203,28 @@ function App(): JSX.Element {
           >
             <Theme theme={'Eleccions Generals 2023'} />
             <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral />
-          </Card>   
+          </Card>  
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='left'
+            imageSmall
+          >
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral  textNormal/>
+          </Card> 
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='left'
+            bodyComponents={2}
+            imageSmall
+          >
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePositionLateral  textNormal/>
+            <EmojiBar
+              clapsCountInitial={0}
+              smilesCountInitial={0}
+            />
+          </Card> 
         </ScrollView>
       </SafeAreaView>
     </NativeBaseProvider>

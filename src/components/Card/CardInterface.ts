@@ -6,5 +6,6 @@ export interface CardProps {
     imageUri: string;
     onImagePress?: () => void; 
     bodyComponents?: number;
+    imageSmall?:boolean
   }
   

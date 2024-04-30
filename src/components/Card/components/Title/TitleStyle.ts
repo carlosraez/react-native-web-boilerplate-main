@@ -1,4 +1,3 @@
-import { Flex } from 'native-base';
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
@@ -11,4 +10,9 @@ export default StyleSheet.create({
     fontSize: 14, 
     fontWeight: 'bold', 
   },
+  listTitleTextNormal: {
+    fontSize: 14, 
+    fontWeight: '400', 
+    color:'#424B5A'
+  }
 })

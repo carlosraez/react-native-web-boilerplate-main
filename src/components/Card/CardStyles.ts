@@ -48,6 +48,12 @@ export default StyleSheet.create({
     borderRadius: 5,
     marginRight: 16,
   },
+  imageListSmall: {
+    width: 100, 
+    height: 100, 
+    borderRadius: 5,
+    marginRight: 16,
+  },
   image: {
     width: '100%', 
     height: 193, 
