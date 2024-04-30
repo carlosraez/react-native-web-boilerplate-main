@@ -11,11 +11,13 @@ const Card: React.FC<CardProps> = ({
   onImagePress,
   bodyComponents
 }) => {
-  const styleImagePosition = imagePosition === 'left' ? styles.imageList : styles.image
+  const styleImagePosition = imagePosition === 'left' || imagePosition === 'right' ? styles.imageList : styles.image
 
   const getImage = () => (imageUri && (<Image source={{ uri: imageUri }} style={styleImagePosition} />));
 
-  const styleContainer = imagePosition === 'left' ? (bodyComponents === 2 ? styles.bodyTwoComponents : styles.cardList) : styles.card
+  const styleContainer = imagePosition === 'left' ? (bodyComponents === 2 ? styles.bodyTwoComponents : styles.cardList) :
+  imagePosition === 'right' ? (bodyComponents === 2 ? styles.bodyTwoComponentsRight : styles.cardListRight)  : 
+  styles.card;
 
   const getChildren = () => {
     if (bodyComponents === 2) {
@@ -25,11 +27,10 @@ const Card: React.FC<CardProps> = ({
     return children;
   };
 
-
   return (
     <TouchableOpacity onPress={onImagePress} >
       <View style={styleContainer}>
-      {(imagePosition === 'top' || imagePosition === 'left') && getImage()}
+      {(imagePosition === 'top' || imagePosition === 'left' || imagePosition === 'right') && getImage()}
       {getChildren()}
       {imagePosition === 'bottom' && getImage()}
       </View>

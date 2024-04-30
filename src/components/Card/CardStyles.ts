@@ -13,11 +13,26 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  cardListRight: {
+    backgroundColor: '#fff', 
+    marginBottom: 24,
+    display: 'flex',
+    flexDirection: 'row-reverse', 
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   bodyTwoComponents: {
     backgroundColor: '#fff', 
     marginBottom: 24,
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  bodyTwoComponentsRight: {
+    backgroundColor: '#fff', 
+    marginBottom: 24,
+    display: 'flex',
+    flexDirection: 'row-reverse', 
     justifyContent: 'center'
   },
   withEmojiVertical: {

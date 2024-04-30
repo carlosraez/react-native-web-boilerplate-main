@@ -165,6 +165,13 @@ function App(): JSX.Element {
               smilesCountInitial={0}
             />
           </Card>
+          <Card
+            imageUri="https://img.3cat.cat/multimedia/jpg/8/3/1713910820738_670.jpg"
+            onImagePress={() => { }}
+            imagePosition='right'
+           >
+            <Title title="Alto el foc a Gaza? Insinuacions, declaracions i silencis que l'apropen i l'allunyen" imagePosition="left" />
+          </Card>
         </ScrollView>
       </SafeAreaView>
     </NativeBaseProvider>
