@@ -26,7 +26,6 @@ export default StyleSheet.create({
     marginBottom: 24,
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center'
   },
   bodyTwoComponentsRight: {
     backgroundColor: '#fff', 
@@ -48,11 +47,23 @@ export default StyleSheet.create({
     borderRadius: 5,
     marginRight: 16,
   },
+  imageListRight: {
+    width: 164, 
+    height: 125, 
+    borderRadius: 5,
+    marginLeft: 16,
+  },
   imageListSmall: {
     width: 100, 
     height: 100, 
     borderRadius: 5,
     marginRight: 16,
+  },
+  imageListSmallRight: {
+    width: 100, 
+    height: 100, 
+    borderRadius: 5,
+    marginLeft: 16,
   },
   image: {
     width: '100%', 

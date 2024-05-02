@@ -10,23 +10,27 @@ const Card: React.FC<CardProps> = ({
   imageUri,
   onImagePress,
   bodyComponents,
-  imageSmall 
+  imageSmall
 }) => {
-  const styleImagePosition = imagePosition === 'left' || imagePosition === 'right' ? (imageSmall ? styles.imageListSmall : styles.imageList)  : styles.image
-
-  const getImage = () => (imageUri && (<Image source={{ uri: imageUri }} style={styleImagePosition} />));
+  const styleImagePosition = imagePosition === 'left' ?
+    (imageSmall ? styles.imageListSmall : styles.imageList) :
+    imagePosition === 'right' ?
+      (imageSmall ?
+        styles.imageListSmallRight : styles.imageListRight)
+      : styles.image
 
   const styleContainer =
     imagePosition === 'left'
       ? (bodyComponents === 2
-        ? styles.bodyTwoComponents 
-        : styles.cardList)        
-    : imagePosition === 'right'
+        ? styles.bodyTwoComponents
+        : styles.cardList)
+      : imagePosition === 'right'
         ? (bodyComponents === 2
-          ? styles.bodyTwoComponentsRight 
-          : styles.cardListRight)         
+          ? styles.bodyTwoComponentsRight
+          : styles.cardListRight)
         : styles.card;
 
+  const getImage = () => (imageUri && (<Image source={{ uri: imageUri }} style={styleImagePosition} />));
 
   const getChildren = () => {
     if (bodyComponents === 2) {
